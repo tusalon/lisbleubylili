@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: CUTIEENAILS 
+// CLIENTE: Lysbleu by Lili
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'a50702b0-375d-495a-83bc-ae5213521c75'; // ID de CUTIEENAILS 
+const NEGOCIO_ID_POR_DEFECTO = 'fc6ef923-6e3c-4f22-a369-35af00aafc4b'; // ID de Lysbleu by Lili
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'CUTIEENAILS ';
+    return config?.nombre || 'Lysbleu by Lili';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '58936348';
+    return config?.telefono || '54965030';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'migdrelis.romero@gmail.com';
+    return config?.email || 'liliancobas722@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a CUTIEENAILS !';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Lysbleu by Lili!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'cutieenails';
+    return config?.ntfy_topic || 'lisbleubylili';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para CUTIEENAILS ');
+console.log('✅ config-negocio.js listo para Lysbleu by Lili');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

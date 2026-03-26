@@ -1,22 +1,22 @@
-// sw.js - Service Worker para CUTIEENAILS 
+// sw.js - Service Worker para Lysbleu by Lili
 
-const CACHE_NAME = 'cutieenails-v1';
+const CACHE_NAME = 'lisbleubylili-v1';
 const urlsToCache = [
-  '/cutieenails/',
-  '/cutieenails/index.html',
-  '/cutieenails/admin.html',
-  '/cutieenails/admin-login.html',
-  '/cutieenails/setup-wizard.html',
-  '/cutieenails/editar-negocio.html',
-  '/cutieenails/manifest.json',
-  '/cutieenails/icons/icon-72x72.png',
-  '/cutieenails/icons/icon-96x96.png',
-  '/cutieenails/icons/icon-128x128.png',
-  '/cutieenails/icons/icon-144x144.png',
-  '/cutieenails/icons/icon-152x152.png',
-  '/cutieenails/icons/icon-192x192.png',
-  '/cutieenails/icons/icon-384x384.png',
-  '/cutieenails/icons/icon-512x512.png'
+  '/lisbleubylili/',
+  '/lisbleubylili/index.html',
+  '/lisbleubylili/admin.html',
+  '/lisbleubylili/admin-login.html',
+  '/lisbleubylili/setup-wizard.html',
+  '/lisbleubylili/editar-negocio.html',
+  '/lisbleubylili/manifest.json',
+  '/lisbleubylili/icons/icon-72x72.png',
+  '/lisbleubylili/icons/icon-96x96.png',
+  '/lisbleubylili/icons/icon-128x128.png',
+  '/lisbleubylili/icons/icon-144x144.png',
+  '/lisbleubylili/icons/icon-152x152.png',
+  '/lisbleubylili/icons/icon-192x192.png',
+  '/lisbleubylili/icons/icon-384x384.png',
+  '/lisbleubylili/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/cutieenails/icons/icon-192x192.png');
+            return caches.match('/lisbleubylili/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para CUTIEENAILS ');
+console.log('✅ Service Worker configurado para Lysbleu by Lili');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
